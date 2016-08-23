@@ -1,0 +1,6 @@
+framework module PerformanteSDK {
+  umbrella header "PerformanteSDK.h"
+
+  export *
+  module * { export * }
+}
