@@ -3,7 +3,7 @@
 ![platform](https://img.shields.io/badge/platform-iOS-green.svg)
 ![tool](https://img.shields.io/badge/tool-SDK-green.svg)
 ![language](https://img.shields.io/badge/language-Objective--C%20%7C%20Swift-green.svg)
-[![version](https://img.shields.io/badge/cocoapods-1.0-green.svg)](http://cocoadocs.org/docsets/PerformanteSDK/1.0/)
+![version](https://img.shields.io/badge/cocoapods-1.0.1-green.svg)
 
 PerformanteSDK is a tool for tracking different events in your application.
 
@@ -17,7 +17,7 @@ PerformanteSDK is a tool for tracking different events in your application.
 * Add this line to your Podfile:
 
 ```ruby
-pod 'PerformanteSDK'
+pod 'PerformanteSDK', '~> 1.0.1'
 ```
 
 * And then execute:

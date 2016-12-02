@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 
     let logoImageView: UIImageView = {
         let view = UIImageView(image: UIImage(named: "logo"))
-        view.contentMode = .ScaleAspectFit
+        view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -38,41 +38,41 @@ class ViewController: UIViewController {
     let eventButton: UIButton = {
         let button = UIButton(frame: CGRect.zero)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Send event", forState: UIControlState.Normal)
-        button.backgroundColor = UIColor.yellowColor()
-        button.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        button.setTitle("Send event", for: UIControlState())
+        button.backgroundColor = UIColor.yellow
+        button.setTitleColor(UIColor.blue, for: UIControlState())
         return button
     }()
 
     // MARK: UI Actions
 
     func configureEventButtonAction() {
-        eventButton.addTarget(self, action: #selector(eventButtonAction(_:)), forControlEvents: .TouchUpInside)
+        eventButton.addTarget(self, action: #selector(eventButtonAction(_:)), for: .touchUpInside)
     }
 
-    func eventButtonAction(sender: UIButton) {
+    func eventButtonAction(_ sender: UIButton) {
         performanteSDK.sendAppEvent("Tap_button_event")
     }
 
     // MARK: Setup layout
 
     func setupLayout() {
-        let horizontalLogoConstraint = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-(100)-[view]-(100)-|",
+        let horizontalLogoConstraint = NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-(100)-[view]-(100)-|",
             options: NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views:["view": logoImageView]
         )
 
-        let horizontalButtonConstraint = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|[button]|",
+        let horizontalButtonConstraint = NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|[button]|",
             options: NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views:["button": eventButton]
         )
 
-        let verticalConstraint = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|[view]-[button(50)]|",
+        let verticalConstraint = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|[view]-[button(50)]|",
             options: NSLayoutFormatOptions(rawValue: 0),
             metrics: nil,
             views:[

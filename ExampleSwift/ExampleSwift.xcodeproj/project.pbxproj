@@ -11,7 +11,7 @@
 		4E82A0271C8E0CB900D15708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82A0261C8E0CB900D15708 /* ViewController.swift */; };
 		4E82A02C1C8E0CB900D15708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E82A02B1C8E0CB900D15708 /* Assets.xcassets */; };
 		4E82A02F1C8E0CB900D15708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E82A02D1C8E0CB900D15708 /* LaunchScreen.storyboard */; };
-		F6A1B1E035BC3D890174EA70 /* Pods_ExampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D054D99709982949CEB53A7 /* Pods_ExampleSwift.framework */; };
+		C19B94200BF90AA65F7E0109 /* Pods_ExampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5EA8F21025317DA458DFA7 /* Pods_ExampleSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +22,9 @@
 		4E82A02E1C8E0CB900D15708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E82A0301C8E0CB900D15708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E82A0591C8E1A2D00D15708 /* ExampleSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ExampleSwift-Bridging-Header.h"; path = "ExampleSwift/ExampleSwift-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		5D5EA8F21025317DA458DFA7 /* Pods_ExampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7914D5E4ACFE7D774D1642A3 /* Pods-ExampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		79831BD2A28E6CB1695D367F /* Pods-ExampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift.release.xcconfig"; sourceTree = "<group>"; };
-		8D054D99709982949CEB53A7 /* Pods_ExampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A1B1E035BC3D890174EA70 /* Pods_ExampleSwift.framework in Frameworks */,
+				C19B94200BF90AA65F7E0109 /* Pods_ExampleSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 		97F5593A137BDAD5D3319D51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D054D99709982949CEB53A7 /* Pods_ExampleSwift.framework */,
+				5D5EA8F21025317DA458DFA7 /* Pods_ExampleSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +122,7 @@
 				TargetAttributes = {
 					4E82A0201C8E0CB900D15708 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -198,7 +199,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -320,6 +321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.performante.ExampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ExampleSwift/ExampleSwift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -333,6 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.performante.ExampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ExampleSwift/ExampleSwift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

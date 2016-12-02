@@ -10,19 +10,19 @@ import PerformanteSDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let performanteSDK = PFSDK.newWithProductId("Example-Swift", apiKey:"58dbb0ee-3c5d-4d7d-a3ac-2df4559cb00c")
+    let performanteSDK = PFSDK.new(withProductId: "Example-Swift", apiKey:"58dbb0ee-3c5d-4d7d-a3ac-2df4559cb00c")
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         configurePerformanteSDK()
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.rootViewController = ViewController(performanteSDK: performanteSDK)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = ViewController(performanteSDK: performanteSDK!)
         window?.makeKeyAndVisible()
         return true
     }
     
     func configurePerformanteSDK() {
-        performanteSDK.setExistingUser(false)
-        performanteSDK.sendAppStarted()
+        performanteSDK?.setExistingUser(false)
+        performanteSDK?.sendAppStarted()
     }
 
 }
