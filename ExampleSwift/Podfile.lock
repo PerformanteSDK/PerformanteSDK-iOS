@@ -1,0 +1,12 @@
+PODS:
+  - PerformanteSDK (1.0.1)
+
+DEPENDENCIES:
+  - PerformanteSDK (~> 1.0.1)
+
+SPEC CHECKSUMS:
+  PerformanteSDK: 7355e2c5f9ffa025cee2e8c5bad64ae7c757e24e
+
+PODFILE CHECKSUM: 48ade9c94058ee65b49b688850713457639e37e4
+
+COCOAPODS: 1.1.1
